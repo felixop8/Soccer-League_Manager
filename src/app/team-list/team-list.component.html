@@ -1,6 +1,6 @@
 <div *ngFor="let team of teams | async" (click)="goToDetailPage(team)" class="panel panel-default">
   <div class="panel-body">
-    <h2><em>{{team.name}}</em></h2>
-    <h3> {{team.description}}</h3>
+    <h2><em>{{team.info[0].name}}</em></h2>
+    <h3> {{team.info[0].description}}</h3>
   </div>
 </div>

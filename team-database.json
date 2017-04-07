@@ -1,31 +1,65 @@
-{ "info": [{
-    "name": "Epicodus FC",
-    "description": "A team based in Portland.",
-    "logo":"img path"
-    }],
-  "players": [{
-    "name": "Andre",
-    "bio": "Borned in Portland, playing since 5",
-    "position": "Center",
-    "photoProfile": "img path"
-    }, {
-    "name": "Yosuke",
-    "bio": "Borned in Japan, playing since 3",
-    "position": "Forward",
-    "photoProfile": "img path"
-    }, {
-    "name": "Emily",
-    "bio": "Borned in San Diego, playing since 10",
-    "position": "Defense",
-    "photoProfile": "img path"
-    }],
-  "boardMembers": [{
-    "name": "Richard",
-    "role": "President",
-    "photoProfile": "img path"
-    }, {
-    "name": "Barb",
-    "role": "Manager",
-    "photoProfile": "img path"
+{
+  "teams": [{
+    "info": [{
+      "name": "Epicodus FC",
+      "description": "A team based in Portland.",
+      "logo":"img path"
+      }],
+    "players": [{
+      "name": "Andre",
+      "bio": "Borned in Portland, playing since 5",
+      "position": "Center",
+      "photoProfile": "img path"
+      }, {
+      "name": "Yosuke",
+      "bio": "Borned in Japan, playing since 3",
+      "position": "Forward",
+      "photoProfile": "img path"
+      }, {
+      "name": "Emily",
+      "bio": "Borned in San Diego, playing since 10",
+      "position": "Defense",
+      "photoProfile": "img path"
+      }],
+    "boardMembers": [{
+      "name": "Richard",
+      "role": "President",
+      "photoProfile": "img path"
+      }, {
+      "name": "Barb",
+      "role": "Manager",
+      "photoProfile": "img path"
+    }]
+  },{
+    "info": [{
+      "name": "TeamTreeHouse FC",
+      "description": "A team based in US.",
+      "logo":"img path"
+      }],
+    "players": [{
+      "name": "Juan",
+      "bio": "Borned in Portland, playing since 5",
+      "position": "Center",
+      "photoProfile": "img path"
+      }, {
+      "name": "Esteban",
+      "bio": "Borned in Japan, playing since 3",
+      "position": "Forward",
+      "photoProfile": "img path"
+      }, {
+      "name": "Maria",
+      "bio": "Borned in San Diego, playing since 10",
+      "position": "Defense",
+      "photoProfile": "img path"
+      }],
+    "boardMembers": [{
+      "name": "Carlos",
+      "role": "President",
+      "photoProfile": "img path"
+      }, {
+      "name": "Manuel",
+      "role": "Manager",
+      "photoProfile": "img path"
+    }]
   }]
 }

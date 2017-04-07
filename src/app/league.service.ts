@@ -6,7 +6,7 @@ export class LeagueService {
   teams: FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
-    this.teams = angularFire.database.list('info');
+    this.teams = angularFire.database.list('teams');
   }
 
   getTeams(){
