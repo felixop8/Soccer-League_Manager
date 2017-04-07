@@ -1,3 +1,6 @@
-<p>
-  team-list works!
-</p>
+<div *ngFor="let team of teams | async" (click)="goToDetailPage(team)" class="panel panel-default">
+  <div class="panel-body">
+    <h2><em>{{team.name}}</em></h2>
+    <h3> {{team.description}}</h3>
+  </div>
+</div>
