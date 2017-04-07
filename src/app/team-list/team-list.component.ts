@@ -21,7 +21,7 @@ export class TeamListComponent implements OnInit {
   }
 
   goToDetailPage(clickedAlbum) {
-   this.router.navigate(['team', clickedAlbum.name]);
+   this.router.navigate(['team', clickedAlbum.$key]);
  };
 
 }
