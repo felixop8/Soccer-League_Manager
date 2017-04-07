@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { TeamListComponent } from './team-list/team-list.component';
 import { TeamComponent } from './team/team.component';
 import { AboutComponent } from './about/about.component';
+import { PlayersComponent } from './players/players.component';
 
 
 const appRoutes: Routes = [
@@ -14,12 +15,12 @@ const appRoutes: Routes = [
       path: 'team/:id',
       component: TeamComponent,
       children: [
-        {  path:'',
+        {  path:'about',
           component: AboutComponent
         },
         {
            path: 'players',
-           component: AboutComponent
+           component: PlayersComponent
         }
       ]
   }
