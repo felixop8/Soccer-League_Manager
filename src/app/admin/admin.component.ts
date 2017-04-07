@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+  hide: boolean = true;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  remove() {
+    this.hide = false
   }
 
 }

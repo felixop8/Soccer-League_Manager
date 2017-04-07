@@ -16,11 +16,13 @@ const appRoutes: Routes = [
   },
   {
       path: 'admin',
-      component: AdminComponent
-  },
-  {
-      path: 'deleteTeam',
-      component: DeleteTeamComponent
+      component: AdminComponent,
+      children: [
+        {
+            path: 'deleteTeam',
+            component: DeleteTeamComponent
+        }
+      ]
   },
   {
       path: 'team/:id',

@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row" *ngIf="hide">
   <!--Add Team-->
-  <a routerLink="deleteTeam"><div class="col-xs-6 col-md-3">
+  <a routerLink="deleteTeam" (click)="remove()"><div class="col-xs-6 col-md-3">
     <div class="thumbnail">
       <img src="../../assets/add.png">
       <div class="caption">
@@ -36,5 +36,8 @@
       </div>
     </div>
   </div>
+</div>
 
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
