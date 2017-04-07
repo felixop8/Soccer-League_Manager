@@ -1,6 +1,6 @@
 <div class="row" *ngIf="hide">
   <!--Add Team-->
-  <a routerLink="deleteTeam" (click)="remove()"><div class="col-xs-6 col-md-3">
+  <a routerLink="addTeam" (click)="remove()"<div class="col-xs-6 col-md-3">
     <div class="thumbnail">
       <img src="../../assets/add.png">
       <div class="caption">
@@ -10,14 +10,14 @@
     </div>
   </div></a>
   <!--Delete Team-->
-  <div class="col-xs-6 col-md-3">
+  <a routerLink="deleteTeam" (click)="remove()"><div class="col-xs-6 col-md-3">
     <div class="thumbnail">
       <img src="../../assets/delete.png">
       <div class="caption">
         <h3>Delete Team</h3>
       </div>
     </div>
-  </div>
+  </div></a>
   <!--Add player-->
   <div class="col-xs-6 col-md-3">
     <div class="thumbnail">
