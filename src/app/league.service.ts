@@ -13,4 +13,8 @@ export class LeagueService {
     return this.teams;
   }
 
+  getTeamById(teamId: string){
+    return this.angularFire.database.object('teams/' + teamId);
+  }
+
 }
