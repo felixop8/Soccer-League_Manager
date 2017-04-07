@@ -15,7 +15,12 @@ const appRoutes: Routes = [
       component: TeamComponent,
       children: [
         {  path:'',
-          component: AboutComponent}
+          component: AboutComponent
+        },
+        {
+           path: 'players',
+           component: AboutComponent
+        }
       ]
   }
 ];
