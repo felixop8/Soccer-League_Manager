@@ -24,7 +24,6 @@ export class PlayersComponent implements OnInit {
             this.teamId = +params["id"];
     });
     this.playersToDisplay = this.leagueService.getTeamById(this.teamId);
-    console.log(this.playersToDisplay);
   }
 
 }
