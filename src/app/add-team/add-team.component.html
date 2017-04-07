@@ -1,0 +1,22 @@
+<h3>Add New Team</h3>
+<div>
+  <div>
+    <label>Team Name</label>
+    <br>
+    <input #teamName>
+  </div>
+
+  <div>
+    <label>Team About</label>
+    <br>
+    <textarea #teamDescription></textarea>
+  </div>
+
+  <div>
+    <label>Team Logo</label>
+    <br>
+    <input #teamLogo>
+  </div>
+</div>
+<br>
+<button class="btn btn-success" (click)="submitForm(teamName.value, teamDescription.value, teamLogo.value); teamName.value=''; teamDescription.value=''; teamLogo.value=''">Add</button>
