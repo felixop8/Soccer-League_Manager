@@ -1,5 +1,15 @@
 <div class="jumbotron">
-  <h2>{{(teamToDisplay | async)?.info[0].name}}</h2>
-  <h4>{{(teamToDisplay | async)?.info[0].description}}</h4>
-  <p>{{(teamToDisplay | async)?.info[0].logo}}</p>
+  <div class="row">
+    <h2 class="col-md-6">{{(teamToDisplay | async)?.info[0].name}}</h2>
+    <p class="col-md-6">{{(teamToDisplay | async)?.info[0].logo}}</p>
+  </div>
+</div>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a routerLink="about">About</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
