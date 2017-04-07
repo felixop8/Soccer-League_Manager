@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-team-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team-list.component.css']
 })
 export class TeamListComponent implements OnInit {
+  teams: FirebaseListObservable<any[]>;
+
 
   constructor() { }
 
