@@ -5,12 +5,17 @@ import { TeamComponent } from './team/team.component';
 import { AboutComponent } from './about/about.component';
 import { PlayersComponent } from './players/players.component';
 import { BoardMembersComponent } from './board-members/board-members.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 const appRoutes: Routes = [
   {
       path: '',
       component: TeamListComponent
+  },
+  {
+      path: 'admin',
+      component: AdminComponent
   },
   {
       path: 'team/:id',
