@@ -2,6 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TeamListComponent } from './team-list/team-list.component';
 import { TeamComponent } from './team/team.component';
+import { AboutComponent } from './about/about.component';
 
 
 const appRoutes: Routes = [
@@ -11,8 +12,12 @@ const appRoutes: Routes = [
   },
   {
       path: 'team/:id',
-      component: TeamComponent
-  }
+      component: TeamComponent,
+      children: [
+        {  path:'about',
+          component: AboutComponent}
+      ]
+  },
 
 ];
 
