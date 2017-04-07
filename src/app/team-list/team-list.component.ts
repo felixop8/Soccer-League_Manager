@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { LeagueService } from '../league.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-team-list',
@@ -13,10 +14,14 @@ export class TeamListComponent implements OnInit {
   teams: FirebaseListObservable<any[]>;
 
 
-  constructor(private leagueService: LeagueService) { }
+  constructor(private router: Router, private leagueService: LeagueService) { }
 
   ngOnInit() {
-    this.teams = this.leagueService.getTeams(); 
+    this.teams = this.leagueService.getTeams();
   }
+
+  goToDetailPage(clickedAlbum) {
+   this.router.navigate(['team', clickedAlbum.name]);
+ };
 
 }
