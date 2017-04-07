@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { FirebaseObjectObservable } from 'angularfire2';
 import { LeagueService } from '../league.service';
 import { AboutComponent } from '../about/about.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-team',
@@ -15,7 +16,7 @@ export class TeamComponent implements OnInit {
   teamId: string;
   teamToDisplay;
 
-  constructor(private route: ActivatedRoute, private location: Location, private leagueService: LeagueService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private leagueService: LeagueService, private router: Router) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -24,5 +25,4 @@ export class TeamComponent implements OnInit {
 
     this.teamToDisplay = this.leagueService.getTeamById(this.teamId);
   }
-
 }
