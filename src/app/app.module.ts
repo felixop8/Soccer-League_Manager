@@ -8,6 +8,7 @@ import { TeamListComponent } from './team-list/team-list.component';
 import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys'
 import { AngularFireModule } from 'angularfire2';
+import { TeamComponent } from './team/team.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -19,7 +20,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    TeamListComponent
+    TeamListComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
