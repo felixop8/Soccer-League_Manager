@@ -4,6 +4,7 @@ import { TeamListComponent } from './team-list/team-list.component';
 import { TeamComponent } from './team/team.component';
 import { AboutComponent } from './about/about.component';
 import { PlayersComponent } from './players/players.component';
+import { BoardMembersComponent } from './board-members/board-members.component';
 
 
 const appRoutes: Routes = [

@@ -11,6 +11,7 @@ import { AngularFireModule } from 'angularfire2';
 import { TeamComponent } from './team/team.component';
 import { AboutComponent } from './about/about.component';
 import { PlayersComponent } from './players/players.component';
+import { BoardMembersComponent } from './board-members/board-members.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     TeamListComponent,
     TeamComponent,
     AboutComponent,
-    PlayersComponent
+    PlayersComponent,
+    BoardMembersComponent
   ],
   imports: [
     BrowserModule,
