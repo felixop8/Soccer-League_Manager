@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../team';
-// import { BoardMembers } from '../board-members';
-// import { Info } from '../info';
-// import { Players } from '../players';
+import { BoardMembers } from '../board-members';
+import { TeamInfo } from '../team-info';
+import { Players } from '../players';
 
 
 @Component({
@@ -19,22 +19,22 @@ export class AddTeamComponent implements OnInit {
 
   submitForm(name: string, description: string, logo: string) {
     let newTeam: Team = new Team(
-        new BoardMembers(
-          "",
-          "",
-          "",
+        new BoardMembers (
+          "Jose",
+          "img path",
+          "el presidente",
         ),
-        new Info(
+        new TeamInfo (
           name,
           description,
           logo
       ),
-      new Players(
-        "",
-        "",
-        ""
+      new Players (
+        "felix",
+        "de illescas",
+        "central",
+        "img de felix"
       )
-
     );
   }
 
