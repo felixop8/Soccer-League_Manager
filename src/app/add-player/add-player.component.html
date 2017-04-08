@@ -1,3 +1,28 @@
-<p>
-  add-player works!
-</p>
+<h3>Add New Player</h3>
+<div>
+  <div>
+    <label>Player Name</label>
+    <br>
+    <input #playerName>
+  </div>
+
+  <div>
+    <label>Bio</label>
+    <br>
+    <textarea #bio></textarea>
+  </div>
+
+  <div>
+    <label>Position</label>
+    <br>
+    <input #position>
+  </div>
+
+  <div>
+    <label>Photo Profile</label>
+    <br>
+    <input #photoProfile>
+  </div>
+</div>
+<br>
+<button class="btn btn-success" (click)="submitForm(playerName.value, bio.value, position.value, photoProfile.value); playerName.value=''; bio.value=''; position.value=''; photoProfile.value=''">Add</button>
