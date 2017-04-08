@@ -8,6 +8,7 @@ import { BoardMembersComponent } from './board-members/board-members.component';
 import { AdminComponent } from './admin/admin.component';
 import { DeleteTeamComponent } from './delete-team/delete-team.component';
 import { AddTeamComponent } from './add-team/add-team.component';
+import { AddPlayerComponent } from './add-player/add-player.component';
 
 
 const appRoutes: Routes = [
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
         {
             path: 'addTeam',
             component: AddTeamComponent
+        },
+        {
+            path: 'addPlayer',
+            component: AddPlayerComponent
         }
       ]
   },
