@@ -6,7 +6,7 @@ import { Players } from '../players';
 import { Location } from '@angular/common';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 import { LeagueService } from '../league.service';
-
+import { PlayersTwo } from '../players-two';
 
 @Component({
   selector: 'app-add-team',
@@ -35,11 +35,12 @@ export class AddTeamComponent implements OnInit {
           logo
         ),
         new Players (
-          'felix',
-          'de illescas',
-          'central',
-          'img de felix'
-        )
+          'juan',
+          'jose',
+          'manuel',
+          'yo qus'
+
+      )
     );
 
     this.leagueService.addTeam(newTeam);
