@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../team';
+import { BoardMembers } from '../board-members';
+import { Info } from '../info';
+import { Players } from '../players';
+
 
 @Component({
   selector: 'app-add-team',
@@ -13,8 +17,21 @@ export class AddTeamComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(name: string, description: string, logo: string) {
-    var newTeam: Team = new Team(name, description, logo);
-  }
+  // submitForm(name: string, description: string, logo: string) {
+  //   let newTeam: Team = new Team(
+  //       new BoardMembers(
+  //         name,
+  //         description,
+  //         logo
+  //       ),
+  //     new Info(
+  //
+  //     ),
+  //     new Players(
+  //
+  //     )
+  //
+  //   );
+  // }
 
 }
