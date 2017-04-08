@@ -24,6 +24,15 @@ export class LeagueService {
    this.teams.push(newTeam);
  }
 
+ deleteTeam(teamSelected){
+   this.teams.subscribe(dataLastEmittedFromObserver => {
+     this.allTeams = dataLastEmittedFromObserver;
+     var keyHolder = Object.keys(this.allTeams);
+     var reference = this.angularFire.database.object('/teams/'+ keyHolder[teamSelected]);
+     reference.remove();
+   });
+ }
+
  addPlayer(newPlayer: Players, teamSelected){
    this.teams.subscribe(dataLastEmittedFromObserver => {
      this.allTeams = dataLastEmittedFromObserver;
