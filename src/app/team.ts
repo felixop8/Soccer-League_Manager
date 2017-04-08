@@ -5,7 +5,7 @@ import { Players } from './players';
 export class Team {
   constructor(
     public boardMembers: BoardMembers,
-    public teamInfo: Info,
+    public info: Info,
     public players: Players,
   ){}
 }

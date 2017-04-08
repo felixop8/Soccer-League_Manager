@@ -1,10 +1,10 @@
 {
   "teams": [{
-    "info": [{
+    "info": {
       "name": "Epicodus FC",
       "description": "A team based in Portland.",
       "logo":"img path"
-      }],
+      },
     "players": [{
       "name": "Andre",
       "bio": "Borned in Portland, playing since 5",
@@ -31,11 +31,11 @@
       "photoProfile": "img path"
     }]
   },{
-    "info": [{
+    "info": {
       "name": "TeamTreeHouse FC",
       "description": "A team based in US.",
       "logo":"img path"
-      }],
+      },
     "players": [{
       "name": "Juan",
       "bio": "Borned in Portland, playing since 5",

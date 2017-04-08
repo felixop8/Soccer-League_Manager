@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../team';
 import { BoardMembers } from '../board-members';
-import { TeamInfo } from '../team-info';
+import { Info } from '../info';
 import { Players } from '../players';
 import { Location } from '@angular/common';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
@@ -29,7 +29,7 @@ export class AddTeamComponent implements OnInit {
           "img path",
           "el presidente",
         ),
-        new TeamInfo (
+        new Info (
           name,
           description,
           logo
