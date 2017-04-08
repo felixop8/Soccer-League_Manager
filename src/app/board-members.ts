@@ -1,3 +1,3 @@
 export class BoardMembers {
-  constructor(public name: string, public photprofile: string, public role: string){}
+  constructor(public name: string, public photprofile: string, public role: string) {}
 }

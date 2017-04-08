@@ -10,11 +10,11 @@ export class LeagueService {
     this.teams = angularFire.database.list('teams');
   }
 
-  getTeams(){
+  getTeams() {
     return this.teams;
   }
 
-  getTeamById(teamId: string){
+  getTeamById(teamId) {
     return this.angularFire.database.object('teams/' + teamId);
   }
 

@@ -6,6 +6,6 @@ export class Team {
   constructor(
     public boardMembers: BoardMembers,
     public info: Info,
-    public players: Players,
-  ){}
+    public players: Players
+  ) {}
 }

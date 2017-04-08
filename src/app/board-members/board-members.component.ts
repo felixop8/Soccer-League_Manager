@@ -21,7 +21,7 @@ export class BoardMembersComponent implements OnInit {
 
   ngOnInit() {
     this.sub = this.route.parent.params.subscribe(params => {
-            this.teamId = +params["id"];
+            this.teamId = +params['id'];
     });
     this.boardMembersToDisplay = this.leagueService.getTeamById(this.teamId);
   }

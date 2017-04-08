@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TeamListComponent } from './team-list/team-list.component';
 import { routing } from './app.routing';
-import { masterFirebaseConfig } from './api-keys'
+import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { TeamComponent } from './team/team.component';
 import { AboutComponent } from './about/about.component';

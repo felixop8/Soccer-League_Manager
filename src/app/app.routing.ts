@@ -38,7 +38,7 @@ const appRoutes: Routes = [
       path: 'team/:id',
       component: TeamComponent,
       children: [
-        {  path:'about',
+        {  path: 'about',
           component: AboutComponent
         },
         {

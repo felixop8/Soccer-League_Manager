@@ -23,11 +23,11 @@ export class AddTeamComponent implements OnInit {
   }
 
   submitForm(name: string, description: string, logo: string) {
-    let newTeam: Team = new Team(
+    const newTeam: Team = new Team(
         new BoardMembers (
-          "Jose",
-          "img path",
-          "el presidente",
+          'Jose',
+          'img path',
+          'el presidente',
         ),
         new Info (
           name,
@@ -35,10 +35,10 @@ export class AddTeamComponent implements OnInit {
           logo
         ),
         new Players (
-          "felix",
-          "de illescas",
-          "central",
-          "img de felix"
+          'felix',
+          'de illescas',
+          'central',
+          'img de felix'
         )
     );
 

@@ -14,14 +14,13 @@ import { Router } from '@angular/router';
 })
 export class PlayersComponent implements OnInit {
   teamId: any;
-  private sub: any;
   playersToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private leagueService: LeagueService, private router: Router) { }
 
   ngOnInit() {
-    this.sub = this.route.parent.params.subscribe(params => {
-            this.teamId = +params["id"];
+    this.route.parent.params.forEach((urlParameters) =>  {
+            this.teamId = urlParameters['id'];
     });
     this.playersToDisplay = this.leagueService.getTeamById(this.teamId);
   }

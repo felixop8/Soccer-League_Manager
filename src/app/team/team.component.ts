@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   providers: [LeagueService]
 })
 export class TeamComponent implements OnInit {
-  teamId: string;
+  teamId;
   teamToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private leagueService: LeagueService, private router: Router) { }
