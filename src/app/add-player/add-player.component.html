@@ -1,6 +1,6 @@
 <select (change)="onChange($event.target.value)">
   <option selected>--select One--</option>
-  <option *ngFor="let team of teams | async" value="{{team.info.name}}" >{{team.info.name}}</option>
+  <option *ngFor="let team of teams | async" value="{{team.$key}}" >{{team.info.name}}</option>
 </select>
 
 <h3>Add New Player</h3>
