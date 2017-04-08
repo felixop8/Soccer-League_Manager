@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Team } from './team';
 
 @Injectable()
 export class LeagueService {
@@ -16,5 +17,9 @@ export class LeagueService {
   getTeamById(teamId: string){
     return this.angularFire.database.object('teams/' + teamId);
   }
+
+  addTeam(newTeam: Team) {
+   this.teams.push(newTeam);
+ }
 
 }

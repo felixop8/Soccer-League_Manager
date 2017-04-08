@@ -3,16 +3,21 @@ import { Team } from '../team';
 import { BoardMembers } from '../board-members';
 import { TeamInfo } from '../team-info';
 import { Players } from '../players';
+import { Location } from '@angular/common';
+import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
+import { LeagueService } from '../league.service';
 
 
 @Component({
   selector: 'app-add-team',
   templateUrl: './add-team.component.html',
-  styleUrls: ['./add-team.component.css']
+  styleUrls: ['./add-team.component.css'],
+  providers: [LeagueService]
 })
 export class AddTeamComponent implements OnInit {
+  teamService;
 
-  constructor() { }
+  constructor(private location: Location, private leagueService: LeagueService) { }
 
   ngOnInit() {
   }
@@ -28,14 +33,16 @@ export class AddTeamComponent implements OnInit {
           name,
           description,
           logo
-      ),
-      new Players (
-        "felix",
-        "de illescas",
-        "central",
-        "img de felix"
-      )
+        ),
+        new Players (
+          "felix",
+          "de illescas",
+          "central",
+          "img de felix"
+        )
     );
+
+    this.leagueService.addTeam(newTeam);
   }
 
 }
