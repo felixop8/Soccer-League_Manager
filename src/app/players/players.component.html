@@ -1,7 +1,6 @@
-<div *ngFor= "let player of (playersToDisplay | async)?.players" class="panel panel-default">
+<div *ngFor= "let player of arrayPlayers" class="panel panel-default">
   <div class="panel-body">
-    <h1>{{player.photoProfile}}</h1>
-    <h2>{{player.name}}</h2>
+    <h1>{{player.name}}</h1>
     <h4>{{player.bio}}</h4>
     <h4>{{player.position}}</h4>
   </div>

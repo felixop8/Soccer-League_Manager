@@ -6,8 +6,7 @@ import { Players } from './players';
 @Injectable()
 export class LeagueService {
   teams: FirebaseListObservable<any[]>;
-  allTeams;
-  reference;
+
   constructor(private angularFire: AngularFire) {
     this.teams = angularFire.database.list('teams');
   }
