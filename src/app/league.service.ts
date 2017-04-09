@@ -25,29 +25,25 @@ export class LeagueService {
  }
 
  deleteTeam(teamSelected){
-   this.teams.subscribe(dataLastEmittedFromObserver => {
-     this.allTeams = dataLastEmittedFromObserver;
-     var keyHolder = Object.keys(this.allTeams);
-     var reference = this.angularFire.database.object('/teams/'+ keyHolder[teamSelected]);
+     var reference = this.angularFire.database.object('/teams/'+ [teamSelected]);
      reference.remove();
-   });
  }
 
- addPlayer(newPlayer: Players, teamSelected){
-   this.teams.subscribe(dataLastEmittedFromObserver => {
-     this.allTeams = dataLastEmittedFromObserver;
-     var keyHolder = Object.keys(this.allTeams);
-
-
-    //  for (var i = 0; i < keyHolder.length; i++) {
-    //    if (keyHolder[i] == teamSelected) {
-         var reference = this.angularFire.database.object('/teams/'+ keyHolder[1] + '/players/');
-         reference.remove();
-
-
-    //    }
-    //  }
-
-   });
-  }
+ // addPlayer(newPlayer: Players, teamSelected){
+ //   this.teams.subscribe(dataLastEmittedFromObserver => {
+ //     this.allTeams = dataLastEmittedFromObserver;
+ //     var keyHolder = Object.keys(this.allTeams);
+ //
+ //
+ //    //  for (var i = 0; i < keyHolder.length; i++) {
+ //    //    if (keyHolder[i] == teamSelected) {
+ //         var reference = this.angularFire.database.object('/teams/'+ keyHolder[1] + '/players/');
+ //
+ //
+ //
+ //    //    }
+ //    //  }
+ //
+ //   });
+ //  }
  }
