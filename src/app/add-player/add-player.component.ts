@@ -26,14 +26,14 @@ export class AddPlayerComponent implements OnInit {
 
 }
 
-// submitForm(name: string, bio: string, position: string, photoProfile: string) {
-//   const newPlayer: Players = new Players (
-//     name,
-//     bio,
-//     position,
-//     photoProfile
-//   )
-//   this.leagueService.addPlayer(newPlayer, this.teamSelected);
-//
-// }
+submitForm(name: string, bio: string, position: string, photoProfile: string) {
+  const newPlayer: Players = new Players (
+    name,
+    bio,
+    position,
+    photoProfile
+  )
+  this.leagueService.addPlayer(newPlayer, this.teamSelected);
+
+}
 }

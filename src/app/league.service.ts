@@ -29,21 +29,8 @@ export class LeagueService {
      reference.remove();
  }
 
- // addPlayer(newPlayer: Players, teamSelected){
- //   this.teams.subscribe(dataLastEmittedFromObserver => {
- //     this.allTeams = dataLastEmittedFromObserver;
- //     var keyHolder = Object.keys(this.allTeams);
- //
- //
- //    //  for (var i = 0; i < keyHolder.length; i++) {
- //    //    if (keyHolder[i] == teamSelected) {
- //         var reference = this.angularFire.database.object('/teams/'+ keyHolder[1] + '/players/');
- //
- //
- //
- //    //    }
- //    //  }
- //
- //   });
- //  }
+ addPlayer(newPlayer: Players, teamSelected){
+     var adaRef = this.angularFire.database.list("teams/" + [teamSelected] + '/players');
+     adaRef.push(newPlayer);
+  }
  }

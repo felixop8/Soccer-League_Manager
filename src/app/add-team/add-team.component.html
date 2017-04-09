@@ -17,6 +17,13 @@
     <br>
     <input #teamLogo>
   </div>
+
+  <div>
+    <label>Add Players</label>
+    <br>
+    <input #playerName>
+  </div>
+  <button (click)="addPlayer(playerName.value)">Add players</button>
 </div>
 <br>
 <button class="btn btn-success" (click)="submitForm(teamName.value, teamDescription.value, teamLogo.value); teamName.value=''; teamDescription.value=''; teamLogo.value=''">Add</button>
