@@ -18,7 +18,6 @@ export class DeleteTeamComponent implements OnInit {
 
   onChange(optionFromMenu) {
   this.teamSelected = optionFromMenu;
-  console.log(this.teamSelected);
 }
 
   ngOnInit() {

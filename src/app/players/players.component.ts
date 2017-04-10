@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { FirebaseObjectObservable } from 'angularfire2';
 import { LeagueService } from '../league.service';
 import { Router } from '@angular/router';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 
 @Component({
@@ -15,10 +16,9 @@ import { Router } from '@angular/router';
 export class PlayersComponent implements OnInit {
   teamId: any;
   playersToDisplay;
-  playersProvider;
-  arrayPlayers: any[] = [];
+  myItems: any[] = [];
 
-  constructor(private route: ActivatedRoute, private location: Location, private leagueService: LeagueService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private location: Location, private leagueService: LeagueService, private router: Router, private angularFire: AngularFire) { }
 
   ngOnInit() {
     this.route.parent.params.forEach((urlParameters) =>  {
@@ -26,15 +26,12 @@ export class PlayersComponent implements OnInit {
     });
      this.playersToDisplay = this.leagueService.getTeamById(this.teamId);
 
-     var projects = this.playersToDisplay.subscribe(dataLastEmittedFromObserver => {
-    this.playersProvider = dataLastEmittedFromObserver;
 
-    var keyHolder = Object.keys(this.playersProvider.players)
-    
-    for (var i = 0; i < keyHolder.length; i++) {
-      this.arrayPlayers.push(this.playersProvider.players[keyHolder[i]]);
-    }
-  });
-
-}
-}
+     this.angularFire.database.list('/teams/' + [this.teamId] + '/players', { preserveSnapshot: true})
+     .subscribe(snapshots=>{
+         snapshots.forEach(snapshot => {
+           this.myItems.push(snapshot.val());
+         });
+     })
+   }
+  }
