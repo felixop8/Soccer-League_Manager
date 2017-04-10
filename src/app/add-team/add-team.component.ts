@@ -16,36 +16,19 @@ import { PlayersTwo } from '../players-two';
 })
 export class AddTeamComponent implements OnInit {
   teamService;
-  playersArray: any[]= [];
 
   constructor(private location: Location, private leagueService: LeagueService) { }
 
   ngOnInit() {
   }
 
-  addPlayer(namePlayer) {
-    this.playersArray.push({namePlayer});
-    console.log(this.playersArray);
-  }
-
   submitForm(name: string, description: string, logo: string) {
     const newTeam: Team = new Team(
-        new BoardMembers (
-          'Jose',
-          'img path',
-          'el presidente',
-        ),
         new Info (
           name,
           description,
           logo
         ),
-        new Players (
-        'asfda',
-          "",
-          "",
-          ""
-      )
     );
 
     this.leagueService.addTeam(newTeam);

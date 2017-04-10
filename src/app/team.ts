@@ -4,14 +4,8 @@ import { Players } from './players';
 import { PlayersTwo } from './players-two';
 
 export class Team {
-  public players: Players[];
-  public boardMembers: any[];
   constructor(
-    boardMembers: BoardMembers,
     public info: Info,
-    players: Players
   ) {
-    this.players = [players];
-    this.boardMembers = [boardMembers];
   }
 }
