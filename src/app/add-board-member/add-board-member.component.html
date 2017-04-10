@@ -2,3 +2,26 @@
   <option selected>--select One--</option>
   <option *ngFor="let team of teams | async" value="{{team.$key}}" >{{team.info.name}}</option>
 </select>
+
+<h3>Add New Player</h3>
+<div>
+  <div>
+    <label>Member Name</label>
+    <br>
+    <input #memberName>
+  </div>
+
+  <div>
+    <label>Role</label>
+    <br>
+    <textarea #role></textarea>
+  </div>
+
+  <div>
+    <label>Photo Profile</label>
+    <br>
+    <input #photoProfile>
+  </div>
+</div>
+<br>
+<button class="btn btn-success" (click)="submitForm(memberName.value, role.value, photoProfile.value); memberName.value=''; role.value=''; photoProfile.value=''">Add</button>

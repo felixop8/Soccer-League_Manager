@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Team } from './team';
 import { Players } from './players';
+import { BoardMembers } from './board-members';
 
 @Injectable()
 export class LeagueService {
@@ -32,5 +33,10 @@ export class LeagueService {
  addPlayer(newPlayer: Players, teamSelected){
      var adaRef = this.angularFire.database.list("teams/" + [teamSelected] + '/players');
      adaRef.push(newPlayer);
+  }
+
+  addMember(newMember: BoardMembers, teamSelected){
+    var adaRef = this.angularFire.database.list("teams/" + [teamSelected] + '/boardMembers');
+    adaRef.push(newMember);
   }
  }
