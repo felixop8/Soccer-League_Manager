@@ -19,6 +19,8 @@ export class DeletePlayerComponent implements OnInit {
   constructor(private router: Router, private leagueService: LeagueService, private angularFire: AngularFire) { }
 
   onChange(optionFromMenu) {
+    this.teamSelected = null;
+    this.myItems = [];
     this.teamSelected = optionFromMenu;
 
     this.angularFire.database.list('/teams/' + [this.teamSelected] + '/players', { preserveSnapshot: true})
@@ -33,6 +35,8 @@ export class DeletePlayerComponent implements OnInit {
   }
 
   onChangePlayer(optionFromMenu) {
+    this.playerSelected = null;
+    this.myItems = [];
     this.playerSelected = optionFromMenu;
   }
 
