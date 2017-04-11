@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row well">
   <!--Add Team-->
-  <a routerLink="addTeam"><div class="col-xs-6 col-md-3">
+  <a routerLink="addTeam"><div class="col-xs-6 col-md-4">
     <div class="thumbnail">
       <img src="../../assets/add.png">
       <div class="caption">
@@ -9,7 +9,7 @@
     </div>
   </div></a>
   <!--Delete Team-->
-  <a routerLink="deleteTeam"><div class="col-xs-6 col-md-3">
+  <a routerLink="deleteTeam"><div class="col-xs-6 col-md-4">
     <div class="thumbnail">
       <img src="../../assets/delete.png">
       <div class="caption">
@@ -17,8 +17,20 @@
       </div>
     </div>
   </div></a>
+
+  <a routerLink="updateTeam"><div class="col-xs-6 col-md-4">
+    <div class="thumbnail">
+      <img src="../../assets/edit.png">
+      <div class="caption">
+        <h3>Update Team</h3>
+      </div>
+    </div>
+  </div></a>
+
+  </div>
   <!--Add player-->
-  <a routerLink="addPlayer"><div class="col-xs-6 col-md-3">
+  <div class="row well">
+  <a routerLink="addPlayer"><div class="col-xs-6 col-md-4">
     <div class="thumbnail">
       <img src="../../assets/addPlayer.png">
       <div class="caption">
@@ -27,7 +39,7 @@
     </div>
   </div></a>
   <!--Delete Player-->
-  <a routerLink="deletePlayer"><div class="col-xs-6 col-md-3">
+  <a routerLink="deletePlayer"><div class="col-xs-6 col-md-4">
     <div class="thumbnail">
       <img src="../../assets/deletePlayer.png">
       <div class="caption">
@@ -35,8 +47,18 @@
       </div>
     </div>
   </div></a>
+  <a routerLink="updatePlayer"><div class="col-xs-6 col-md-4">
+    <div class="thumbnail">
+      <img src="../../assets/edit.png">
+      <div class="caption">
+        <h3>Update Player</h3>
+      </div>
+    </div>
+  </div></a>
+</div>
   <!--Add Board Member-->
-  <a routerLink="addBoardMember"><div class="col-xs-6 col-md-3">
+  <div class="row well">
+  <a routerLink="addBoardMember"><div class="col-xs-6 col-md-4">
     <div class="thumbnail">
       <img src="../../assets/addMember.png">
       <div class="caption">
@@ -45,7 +67,7 @@
     </div>
   </div></a>
   <!--Delete BoardMembers-->
-  <a routerLink="deleteBoardMember"><div class="col-xs-6 col-md-3">
+  <a routerLink="deleteBoardMember"><div class="col-xs-6 col-md-4">
     <div class="thumbnail">
       <img src="../../assets/deleteMember.png">
       <div class="caption">
@@ -53,8 +75,16 @@
       </div>
     </div>
   </div></a>
+  <a routerLink="updateBoardMember"><div class="col-xs-6 col-md-4">
+    <div class="thumbnail">
+      <img src="../../assets/edit.png">
+      <div class="caption">
+        <h3>Update Member</h3>
+      </div>
+    </div>
+  </div></a>
 </div>
 
-<div class="container">
+<div class="container col-xs-6 col-md-3">
   <router-outlet></router-outlet>
 </div>
