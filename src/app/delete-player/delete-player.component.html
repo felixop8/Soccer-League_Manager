@@ -1,4 +1,13 @@
+<p>1 Team:</p>
 <select (change)="onChange($event.target.value)">
-  <option selected>--select One--</option>
+  <option selected>--First Select a team--</option>
   <option *ngFor="let team of teams | async" value="{{team.$key}}" >{{team.info.name}}</option>
 </select>
+<br><br>
+<p>2 Player</p>
+<select (change)="onChangePlayer($event.target.value)">
+  <option selected>--select One--</option>
+  <option *ngFor="let player of myItems"  value="{{player[0]}}">{{player[1].name}}</option>
+</select>
+
+<button (click)='deletePlayer()'>Delete Player</button>

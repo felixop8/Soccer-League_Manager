@@ -17,6 +17,11 @@ export class LeagueService {
     return this.teams;
   }
 
+  deletePlayer(playerSelected, teamSelected) {
+    var reference = this.angularFire.database.object('teams/' + [teamSelected] + '/players/' + [playerSelected]);
+    reference.remove();
+  }
+
   getTeamById(teamId) {
     return this.angularFire.database.object('teams/' + teamId);
   }
