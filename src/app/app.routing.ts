@@ -10,6 +10,7 @@ import { DeleteTeamComponent } from './delete-team/delete-team.component';
 import { AddTeamComponent } from './add-team/add-team.component';
 import { AddPlayerComponent } from './add-player/add-player.component';
 import { AddBoardMemberComponent } from './add-board-member/add-board-member.component';
+import { DeletePlayerComponent } from './delete-player/delete-player.component';
 
 
 const appRoutes: Routes = [
@@ -36,6 +37,10 @@ const appRoutes: Routes = [
         {
             path: 'addBoardMember',
             component: AddBoardMemberComponent
+        },
+        {
+            path: 'deletePlayer',
+            component: DeletePlayerComponent
         }
       ]
   },
