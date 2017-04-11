@@ -1,3 +1,13 @@
-<p>
-  delete-board-member works!
-</p>
+<p>1 Team:</p>
+<select (change)="onChange($event.target.value)">
+  <option selected>--First Select a team--</option>
+  <option *ngFor="let team of teams | async" value="{{team.$key}}" >{{team.info.name}}</option>
+</select>
+<br><br>
+<p>2 Player</p>
+<select (change)="onChangePlayer($event.target.value)">
+  <option selected>--select One--</option>
+  <option *ngFor="let boardMember of myItems"  value="{{boardMember[0]}}">{{boardMember[1].name}}</option>
+</select>
+
+<button (click)='deleteMember()'>Delete Player</button>

@@ -36,7 +36,6 @@ export class DeletePlayerComponent implements OnInit {
 
   onChangePlayer(optionFromMenu) {
     this.playerSelected = null;
-    this.myItems = [];
     this.playerSelected = optionFromMenu;
   }
 
