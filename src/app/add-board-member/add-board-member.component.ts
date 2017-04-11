@@ -32,6 +32,5 @@ submitForm(name: string, role: string, photoProfile: string) {
     photoProfile
   )
   this.leagueService.addMember(newMember, this.teamSelected);
-
-}
+  }
 }
