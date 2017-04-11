@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+.resize {
+    width: 200px;
+    height: auto;
+}

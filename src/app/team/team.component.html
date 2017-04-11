@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <div class="row">
     <h2 class="col-md-6">{{(teamToDisplay | async)?.info.name}}</h2>
-    <p class="col-md-6">{{(teamToDisplay | async)?.info.logo}}</p>
+    <img class="col-md-6 resize" src="{{(teamToDisplay | async)?.info.logo}}">
   </div>
 </div>
 <ul class="nav nav-tabs">

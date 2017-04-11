@@ -1,3 +1,5 @@
-<li *ngFor="let player of myItems">
-    {{ player.name }}
-</li>
+<div *ngFor="let player of myItems">
+    <h2>{{ player.name }}</h2>
+    <h2>{{player.bio}}</h2>
+    <img class="resize" src="{{player.photoprofile}}">
+</div>
