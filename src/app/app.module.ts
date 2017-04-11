@@ -18,6 +18,7 @@ import { AddTeamComponent } from './add-team/add-team.component';
 import { AddPlayerComponent } from './add-player/add-player.component';
 import { AddBoardMemberComponent } from './add-board-member/add-board-member.component';
 import { DeletePlayerComponent } from './delete-player/delete-player.component';
+import { DeleteBoardMemberComponent } from './delete-board-member/delete-board-member.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -39,7 +40,8 @@ export const firebaseConfig = {
     AddTeamComponent,
     AddPlayerComponent,
     AddBoardMemberComponent,
-    DeletePlayerComponent
+    DeletePlayerComponent,
+    DeleteBoardMemberComponent
   ],
   imports: [
     BrowserModule,
