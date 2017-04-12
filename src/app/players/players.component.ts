@@ -17,8 +17,13 @@ export class PlayersComponent implements OnInit {
   teamId: any;
   playersToDisplay;
   myItems: any[] = [];
+  filterByPosition: string = "all";
 
   constructor(private route: ActivatedRoute, private location: Location, private leagueService: LeagueService, private router: Router, private angularFire: AngularFire) { }
+
+  onChange(optionFromMenu) {
+    this.filterByPosition = optionFromMenu;
+  }
 
   ngOnInit() {
     this.route.parent.params.forEach((urlParameters) =>  {

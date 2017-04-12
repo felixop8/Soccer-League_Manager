@@ -1,4 +1,11 @@
-<div *ngFor="let player of myItems">
+<select (change)="onChange($event.target.value)">
+  <option value="defense">Defenses</option>
+  <option value="middle">Middle position</option>
+  <option value="forward">Forwards</option>
+  <option value="all" selected="selected">All</option>
+</select>
+
+<div *ngFor="let player of myItems | position:filterByPosition">
     <h2>{{ player.name }}</h2>
     <h2>{{player.bio}}</h2>
     <img class="resize" src="{{player.photoprofile}}">
