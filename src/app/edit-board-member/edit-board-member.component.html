@@ -1,3 +1,25 @@
-<p>
-  edit-board-member works!
-</p>
+<p>1 Team:</p>
+<select (change)="onChange($event.target.value)">
+  <option selected>--First Select a team--</option>
+  <option *ngFor="let team of teams | async" value="{{team.$key}}" >{{team.info.name}}</option>
+</select>
+<br><br>
+<p>2 Player</p>
+<select (change)="onChangePlayer($event.target.value)">
+  <option selected>--select One--</option>
+  <option *ngFor="let member of myItems"  value="{{member[0]}}">{{member[1].name}}</option>
+</select>
+
+<button (click)='updateMember()'>Update Member</button>
+
+<div *ngIf="showForm">
+
+ <h1>{{memberUpdate.name}}</h1>
+<label>Name:</label><br>
+<input [(ngModel)]="memberUpdate.name">
+<label>Photo Profile:</label><br>
+<input [(ngModel)]="memberUpdate.photoprofile">
+<label>Role:</label><br>
+<input [(ngModel)]="memberUpdate.role">
+<button (click)="finishedEditing(memberUpdate)">Done</button>
+</div>
