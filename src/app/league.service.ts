@@ -17,6 +17,18 @@ export class LeagueService {
     return this.teams;
   }
 
+  updatePlayer(updatePlayer, teamSelected) {
+    var categoryEntryInFirebase = this.angularFire.database.object('teams/' + [teamSelected] + '/players/' + [updatePlayer.$key]);
+
+    categoryEntryInFirebase.update({
+      bio: updatePlayer.bio,
+      name: updatePlayer.name,
+      photoprofile: updatePlayer.photoprofile,
+      position: updatePlayer.position
+
+    });
+  }
+
   deletePlayer(playerSelected, teamSelected) {
     var reference = this.angularFire.database.object('teams/' + [teamSelected] + '/players/' + [playerSelected]);
     reference.remove();

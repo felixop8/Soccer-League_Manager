@@ -1,3 +1,27 @@
-<p>
-  edit-player works!
-</p>
+<p>1 Team:</p>
+<select (change)="onChange($event.target.value)">
+  <option selected>--First Select a team--</option>
+  <option *ngFor="let team of teams | async" value="{{team.$key}}" >{{team.info.name}}</option>
+</select>
+<br><br>
+<p>2 Player</p>
+<select (change)="onChangePlayer($event.target.value)">
+  <option selected>--select One--</option>
+  <option *ngFor="let player of myItems"  value="{{player[0]}}">{{player[1].name}}</option>
+</select>
+
+<button (click)='updatePlayer()'>Update Player</button>
+
+<div *ngIf="showForm">
+
+ <h1>{{playerUpdated.name}}</h1>
+<label>Bio:</label><br>
+<input [(ngModel)]="playerUpdated.bio">
+<label>Name:</label><br>
+<input [(ngModel)]="playerUpdated.name">
+<label>Photo Profile:</label><br>
+<input [(ngModel)]="playerUpdated.photoprofile">
+<label>Position:</label><br>
+<input [(ngModel)]="playerUpdated.position">
+<button (click)="finishedEditing(playerUpdated)">Done</button>
+</div>
