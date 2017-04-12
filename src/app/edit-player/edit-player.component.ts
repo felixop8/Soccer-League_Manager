@@ -42,7 +42,7 @@ export class EditPlayerComponent implements OnInit {
     this.playerSelected = optionFromMenu;
   }
 
-  updatePlayer(felix) {
+  updatePlayer() {
     this.showForm = true;
     this.angularFire.database.object('/teams/' + [this.teamSelected] + '/players/' + [this.playerSelected]).subscribe(dataLastEmittedFromObserver => {
     this.playerUpdated = dataLastEmittedFromObserver;

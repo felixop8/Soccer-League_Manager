@@ -1,3 +1,18 @@
-<p>
-  edit-team works!
-</p>
+<p>1 Team:</p>
+<select (change)="onChange($event.target.value)">
+  <option selected>--First Select a team--</option>
+  <option *ngFor="let team of teams | async" value="{{team.$key}}" >{{team.info.name}}</option>
+</select>
+<br><br>
+<button (click)='updateTeam()'>Update Team</button>
+
+<div *ngIf="showForm">
+  <h1>{{teamUpdated.name}}</h1>
+ <label>Description:</label><br>
+ <input [(ngModel)]="teamUpdated.description">
+ <label>Logo:</label><br>
+ <input [(ngModel)]="teamUpdated.logo">
+ <label>Name:</label><br>
+ <input [(ngModel)]="teamUpdated.name">
+ <button (click)="finishedEditing(teamUpdated)">Done</button>
+</div>

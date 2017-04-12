@@ -40,6 +40,17 @@ export class LeagueService {
     });
   }
 
+  updateTeam(teamUpdated, teamSelected ) {
+    var categoryEntryInFirebase = this.angularFire.database.object('teams/' + [teamSelected] + '/info/');
+
+    categoryEntryInFirebase.update({
+      description: teamUpdated.description,
+      logo: teamUpdated.logo,
+      posnameition: teamUpdated.name
+
+    });
+  }
+
   deletePlayer(playerSelected, teamSelected) {
     var reference = this.angularFire.database.object('teams/' + [teamSelected] + '/players/' + [playerSelected]);
     reference.remove();
