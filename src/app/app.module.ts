@@ -23,6 +23,7 @@ import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { EditBoardMemberComponent } from './edit-board-member/edit-board-member.component';
 import { EditTeamComponent } from './edit-team/edit-team.component';
 import { PositionPipe } from './position.pipe';
+import { AboutLeagueComponent } from './about-league/about-league.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -49,7 +50,8 @@ export const firebaseConfig = {
     EditPlayerComponent,
     EditBoardMemberComponent,
     EditTeamComponent,
-    PositionPipe
+    PositionPipe,
+    AboutLeagueComponent
   ],
   imports: [
     BrowserModule,
