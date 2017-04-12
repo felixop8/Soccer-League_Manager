@@ -14,6 +14,7 @@ import { DeletePlayerComponent } from './delete-player/delete-player.component';
 import { DeleteBoardMemberComponent } from './delete-board-member/delete-board-member.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { EditBoardMemberComponent } from './edit-board-member/edit-board-member.component';
+import { EditTeamComponent } from './edit-team/edit-team.component';
 
 
 const appRoutes: Routes = [
@@ -56,6 +57,10 @@ const appRoutes: Routes = [
         {
             path: 'editBoardMember',
             component: EditBoardMemberComponent
+        },
+        {
+            path: 'updateTeam',
+            component: EditTeamComponent
         }
       ]
   },
