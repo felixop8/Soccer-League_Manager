@@ -15,12 +15,17 @@ import { DeleteBoardMemberComponent } from './delete-board-member/delete-board-m
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { EditBoardMemberComponent } from './edit-board-member/edit-board-member.component';
 import { EditTeamComponent } from './edit-team/edit-team.component';
+import { AboutLeagueComponent } from './about-league/about-league.component';
 
 
 const appRoutes: Routes = [
   {
       path: '',
       component: TeamListComponent
+  },
+  {
+    path: 'aboutLeague',
+    component: AboutLeagueComponent
   },
   {
       path: 'admin',
