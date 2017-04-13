@@ -1,32 +1,82 @@
-# SoccerLeague
+# ![pageres](src/assets/manager.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+### By Félix Oporto
 
-## Development server
+## Description		
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Soccer-League-Manager** is a web app league manager that allows to generate teams with information about players and board-members. It has being build with the purpose of demonstrating the use of **Angular 2 JavaScript Framework** which use **TypeScript** open-source programming language.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Step 1: **Clone this repository**
 
-## Running unit tests
+Step 2: **Install npm and bower**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```console
+npm install
+```
 
-## Running end-to-end tests
+Step 3: **Run the serve in the console**
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+```console
+ng s
+```
 
-## Further help
+Step 4: **In your browser type:**
+```browser
+localhost:4200
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Technologies Used
+* JavaScript
+* Angular 2
+* Node.js
+* TypeScript
+* Bower
+* Gulp
+* Bootstrap
+* HTML
+* CSS
 
-# ![pageres](src/assets/diagram.png)	
+## Planning
+
+1. Production
+
+* Create project directory using Angular CLI.
+```console
+ng new Soccer-League-Manager
+```
+
+* Create new components.
+```console
+ng generate component add-team
+etc
+```
+
+# ![pageres](src/assets/diagram.png)
+
+* Seed Database.
 
 # ![pageres](src/assets/dataStructure.png)
+
+
+2. UX/UI
+  * Add bootstrap.
+
+3. Polish
+  * Make README awesome
+
+
+## Support and contact details		
+
+Please direct questions  to the author:		
+* felixop8@gmail.com
+
+## Known Bugs
+No known bugs.
+
+## License		
+MIT Commons		
+Copyright (c) 2017 Felix Oporto Lopez.
